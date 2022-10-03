@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Expression Statement - Javascript</title>
+</head>
+
+<body>
+    <main id="root">
+        <h1>IF Expression Statement - Javascript</h1>
+
+        <script>
+            // If Expression Statement (Pengkondisian)
+
+            // contoh kasus untuk kriteria nilai 
+            let answer = prompt("Berapakah Nilai Anda : "); //input data
+            document.writeln("==================================");
+            document.writeln("<br>");
+            document.writeln(`<p> Apakah Nilai ${answer} Sudah Memenuhi Kriteria? </p>`);
+
+            if (answer > 80) {
+                document.writeln("<p> <b>Nilai anda A </b> </p>");
+            } else if (answer > 75) {
+                document.writeln("<p> <b>Nilai anda B+ </b></p>");
+            } else if (answer > 69) {
+                document.writeln("<p> <b>Nilai anda B </b></p>");
+            } else if (answer > 60) {
+                document.writeln("<p> <b>Nilai anda C+ </b></p>");
+            } else if (answer > 55) {
+                document.writeln("<p> <b>Nilai anda C </b></p>");
+            } else if (answer > 50) {
+                document.writeln("<p> <b>Nilai anda D+ </b></p>");
+            } else if (answer > 40) {
+                document.writeln("<p> <b>Nilai anda D </b></p>");
+            } else {
+                document.writeln("<p> <b>Nilai anda E </b></p>")
+            }
+
+            document.writeln("==================================");
+            document.writeln("<br>");
+
+            // Contoh kasus bilangan habis di bagi 2 dan 3 atau tidak habis dibagi 2 dan 3
+            let data = prompt("Masukkan Nilai Angka : ");
+            document.writeln("<p> Apakah Nilai nya Habis di bagi 3? </p>");
+
+            if (data % 3 === 0) {
+                document.writeln(`<p> <b> ${data} Habis di bagi 3 <b> </p>`);
+            } else if (data % 2 === 0) {
+                document.writeln(`<p> <b> ${data} Habis di bagi 2 </b> <p>`);
+            } else {
+                document.writeln(`<p> <b> ${data} Tidak habis di bagi 2 dan 3 </b> </p>`);
+            }
+            document.writeln("==================================");
+            document.writeln("<br>");
+
+            // Contoh kasus apakah anda termasuk generasi X, Y dan Z
+            let nama = prompt("Masukkan Nama Anda : ");
+            let tahun = prompt("Tahun Lahir : ");
+
+            if (tahun >= 1995) {
+                document.writeln(`<p> Nama Anda : ${nama} </p>`);
+                document.writeln(`<p> Tahun anda : ${tahun} </p>`);
+                document.writeln(`<p><b>${nama} berdasarkan tahun lahir maka anda tergolong Generasi Z</b><p>`);
+            } else if (tahun >= 1980) {
+                document.writeln(`<p> Nama Anda : ${nama} </p>`);
+                document.writeln(`<p> Tahun anda : ${tahun} </p>`);
+                document.writeln(`<p><b>${nama} berdasarkan tahun lahir maka anda tergolong Generasi Y</b><p>`);
+            } else if (tahun >= 1965) {
+                document.writeln(`<p> Nama Anda : ${nama} </p>`);
+                document.writeln(`<p> Tahun anda : ${tahun} </p>`);
+                document.writeln(`<p><b>${nama} berdasarkan tahun lahir maka anda tergolong Generasi X</b><p>`);
+            } else {
+                document.writeln(`<p> Nama Anda : ${nama} </p>`);
+                document.writeln(`<p> Tahun anda : ${tahun} </p>`);
+                document.writeln(
+                    `<p><b>${nama} berdasarkan tahun lahir maka anda tergolong Generasi Baby Boomer</b><p>`);
+            }
+
+            document.writeln("==================================");
+            document.writeln("<br>");
+
+            // Contoh kasus menghitung BMI
+            let berat = prompt("Masukkan Berat Badan Anda : ");
+            let tinggi = prompt("Masukkan Tinggi Anda : ");
+
+            let hasil = berat / (tinggi * tinggi / 100);
+
+            if (hasil <= 18.5) {
+                document.writeln(`<p> Berat Badan (Kg) : ${berat}`);
+                document.writeln(`<p> Tinggi Badang (Cm) : ${tinggi}</p>`);
+                document.writeln(`<p> BMI anda adalah : ${hasil} </p>`);
+                document.writeln("Anda Termasuk Berbadan Kurus");
+            } else if (hasil <= 25) {
+                document.writeln(`<p> Berat Badan (Kg) : ${berat}`);
+                document.writeln(`<p> Tinggi Badang (Cm) : ${tinggi}</p>`);
+                document.writeln(`<p> BMI anda adalah : ${hasil} <p>`);
+                document.writeln("Anda Termasuk Berbadan Langsing / Sehat");
+            } else {
+                document.writeln(`<p> Berat Badan (Kg) : ${berat}`);
+                document.writeln(`<p> Tinggi Badang (Cm) : ${tinggi}</p>`);
+                document.writeln(`<p> BMI anda adalah : ${hasil}</p>`);
+                document.writeln("Anda Termasuk Berbadan Gemuk");
+            }
+
+            document.writeln("<br>");
+            document.writeln("==================================");
+        </script>
+    </main>
+</body>
+
+</html>
